@@ -20,9 +20,8 @@ from __future__ import print_function
 import findspark
 findspark.init()
 
-# $example on$
+import os
 from pyspark.ml.regression import LinearRegression
-# $example off$
 from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
@@ -31,10 +30,13 @@ if __name__ == "__main__":
         .appName("LinearRegressionWithElasticNet")\
         .getOrCreate()
 
-    # $example on$
+    cwd = os.getcwd()
+    print('\n \n \n \n')
+    print(cwd)
+    print('\n \n \n \n')
     # Load training data
     training = spark.read.format("libsvm")\
-        .load("/home/rwang/Desktop/sample_linear_regression_data.txt")
+        .load("/opt/spark-3.0.0-bin-hadoop2.7/data/mllib/sample_linear_regression_data.txt")
 
     lr = LinearRegression(maxIter=10, regParam=0.3, elasticNetParam=0.8)
 

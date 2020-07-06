@@ -18,7 +18,8 @@
 from __future__ import print_function
 
 import findspark
-findspark.init()
+SPARK_HOME = '/opt/spark-3.0.0-bin-hadoop2.7/'
+findspark.init(SPARK_HOME)
 
 import os
 from pyspark.ml.regression import LinearRegression

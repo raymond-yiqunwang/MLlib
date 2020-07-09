@@ -21,7 +21,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.75,
                                                     test_size=0.25,
                                                     random_state=123)
 
-#algo = "linear_regression"
+algo = "linear_regression"
 #algo = "linear_SVR"
 #algo = "SGD_regressor"
 #algo = "kernel_ridge"
@@ -30,7 +30,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.75,
 #algo = "MLP"
 #algo = "GradientBoosting"
 #algo = "AdaBoost"
-algo = "XGBoost"
+#algo = "XGBoost"
 
 if algo == "linear_regression":
     # linear regression

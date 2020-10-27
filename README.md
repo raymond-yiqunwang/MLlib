@@ -14,6 +14,7 @@ you are very welcome to contact the developer at
 raymondwang@u.northwestern.edu
 ```
 
+
 ## Dataset preparation
 This repository contains some data acquisition and feature engineering utility tools. Please see details enumerated below.
 
@@ -73,6 +74,25 @@ model.py # the deep neural network model is defined here
 It bypasses the model training process and 
 directly loads the pre-trained network to make predictions.
 
-## Spark templates
 
+## Spark templates
+**I hope you find contents in this repository interesting.**
+
+`Spark_setup.md` We provide step-by-step tutorial on how to build your own mini-computer cluster 
+with Slurm job scheduler and Apache Spark.
+In this tutorial, we use 2 Dell Precision Tower workstations and 2 Raspberry Pi machines 
+to build this Spark cluster.
+However, it is recommended to use the same or similar architectures for the cluster, 
+which will improve performance.
+
+`Slurm_config` directory contains configuration files for Slurm job scheduler.
+It is possible to integrate Spark into Slurm system for better job management.
+
+Once you have the Spark cluster ready for job submission,
+we provide several simple examples to run Spark applications.
+```bash
+word_count.py # PySpark program for distributed word-count tasks
+regression_models.py # linear regression and decision tree regression models
+cross_validation.py # an example of doing cross-validation in PySpark
+```
 

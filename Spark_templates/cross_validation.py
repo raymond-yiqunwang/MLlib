@@ -1,15 +1,7 @@
-"""
-A simple example demonstrating model selection using CrossValidator.
-This example also demonstrates how Pipelines are Estimators.
-Run with:
-  bin/spark-submit examples/src/main/python/ml/cross_validator.py
-"""
 from __future__ import print_function
-
 import findspark
 SPARK_HOME = '/opt/spark-3.0.0-bin-hadoop2.7/'
 findspark.init(SPARK_HOME)
-
 from pyspark.ml import Pipeline
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
@@ -46,12 +38,6 @@ if __name__ == "__main__":
     lr = LogisticRegression(maxIter=10)
     pipeline = Pipeline(stages=[tokenizer, hashingTF, lr])
 
-    # We now treat the Pipeline as an Estimator, wrapping it in a CrossValidator instance.
-    # This will allow us to jointly choose parameters for all Pipeline stages.
-    # A CrossValidator requires an Estimator, a set of Estimator ParamMaps, and an Evaluator.
-    # We use a ParamGridBuilder to construct a grid of parameters to search over.
-    # With 3 values for hashingTF.numFeatures and 2 values for lr.regParam,
-    # this grid will have 3 x 2 = 6 parameter settings for CrossValidator to choose from.
     paramGrid = ParamGridBuilder() \
         .addGrid(hashingTF.numFeatures, [10, 100, 1000]) \
         .addGrid(lr.regParam, [0.1, 0.01]) \

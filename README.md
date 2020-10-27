@@ -37,31 +37,33 @@ where the function to be parallelized could be easily modified for your own task
 for high frequency trading tasks. 
 Simple linear regression is used here for fundamental feature analysis.
 
+[6] `stocks.py` is a small program for stock beta prediction. It is just a toy model.
 
-## Feature engineering
-    standard scaler
-    one-hot encoding
-    ordinal encoding
 
-## Preprocessing
-    train-test-val split
+## Sklearn\_templates
+This repository contains multiple machine learning regression and classification model templates 
+using the scikit-learn package, including:
+```bash
+Simple linear regression
+Linear SVR
+AdaBoost regresion
+Gradient boosting regression/classification
+Kernel ridge regression
+SGD regression
+Lasso-Lars regression
+Multilayer perceptron regression
+XGBoost regression
+KNN classification
+Support vector machine classification
+Gaussian processes classification
+```
+We also provide tools to plot correlation heatmap (`correlation_heatmap.py`) 
+as well as learning curve (`learning_curve.py`).
 
-## Regression models
-    linear regression
 
-##Classification models
-    decision tree
+## PyTorch\_templates
 
-## Generative models
-    GAN
-    VAE
 
-## Cross validation
-    k-fold CV
+## Spark\_templates
 
-## Error metrics
-    MAE, MSE, RMSE
-    F1, r2, AUC
-
-## Visualization
 

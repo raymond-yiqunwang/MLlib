@@ -14,7 +14,7 @@ you are very welcome to contact the developer at
 raymondwang@u.northwestern.edu
 ```
 
-## Dataset\_prep
+## Dataset preparation
 This repository contains some data acquisition and feature engineering utility tools. Please see details enumerated below.
 
 [1] Toy dataset for both regression and classification tasks can be found in `UCI_repo.tar.gz`
@@ -40,7 +40,7 @@ Simple linear regression is used here for fundamental feature analysis.
 [6] `stocks.py` is a small program for stock beta prediction. It is just a toy model.
 
 
-## Sklearn\_templates
+## Sklearn templates
 This repository contains multiple machine learning regression and classification model templates 
 using the scikit-learn package, including:
 ```bash
@@ -61,9 +61,18 @@ We also provide tools to plot correlation heatmap (`correlation_heatmap.py`)
 as well as learning curve (`learning_curve.py`).
 
 
-## PyTorch\_templates
+## PyTorch templates
+This repository contains the major components required for a typical deep learning project, 
+i.e. 
+```bash
+main.py # user/developer interface which defines modle parameters and work flow
+data.py # driver program for data loader
+model.py # the deep neural network model is defined here
+```
+`predict.py` is not necessary but we include it here for user convenience.
+It bypasses the model training process and 
+directly loads the pre-trained network to make predictions.
 
-
-## Spark\_templates
+## Spark templates
 
 
